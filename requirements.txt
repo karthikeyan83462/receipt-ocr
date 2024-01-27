@@ -13,7 +13,7 @@ jupyter_core==5.5.1
 matplotlib-inline==0.1.6
 nest-asyncio==1.5.8
 numpy==1.26.3
-opencv-python==4.9.0.80
+opencv-contrib-python-headless
 packaging==23.2
 parso==0.8.3
 pillow==10.2.0
