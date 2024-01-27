@@ -170,12 +170,12 @@ def main():
             st.text(f"    {key}: {value}")
 
         # Display extracted items and costs
-        st.subheader("Items and Costs")
+        st.subheader("Items and Costs:")
         for i in range(len(items)):
             st.write(f"    {items[i]}: {item_cost[i]}")
 
         # Display additional values
-        st.subheader("Additional Values")
+        st.subheader("Additional Values:")
         for i in range(len(additional_val)):
             st.write(f"    {additional_val[i]}: {val_cost[i]}")
 
