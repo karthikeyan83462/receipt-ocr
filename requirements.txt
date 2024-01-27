@@ -22,12 +22,13 @@ prompt-toolkit==3.0.43
 psutil==5.9.7
 pure-eval==0.2.2
 Pygments==2.17.2
-pytesseract==0.3.10
+pytesseract
 python-dateutil==2.8.2
 pytz==2023.3.post1
 pyzmq==25.1.2
 six==1.16.0
 stack-data==0.6.3
+tesseract
 tornado==6.4
 traitlets==5.14.0
 watchdog==3.0.0
