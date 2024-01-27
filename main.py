@@ -8,6 +8,8 @@ import numpy as np
 from pytesseract import Output
 
 # Functions
+pytesseract.pytesseract.tesseract_cmd = '/usr/bin/tesseract'
+
 def clean_special_characters(name, excluded_words=None):
     if excluded_words is None:
         excluded_words = set()
