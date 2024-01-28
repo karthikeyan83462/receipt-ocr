@@ -8,7 +8,7 @@ import numpy as np
 from pytesseract import Output
 
 # Import functions from utils.py
-from utils import clean_special_characters, clean_n_s, extract_info, extract_merchant_info
+from utils import *
 
 # Main function
 def main():
