@@ -36,7 +36,7 @@ def extract_values(text, keywords, remove_list):
             val_cost.extend(cost)
     return vals, val_cost
 
-def extract_merchant_info(text):
+def extract_merchant_info(text,excluded_words):
     merchant_name_match = re.search(r'^\s*(.+?)(?:\d|^\s*$)', text, re.MULTILINE | re.DOTALL)
     phone_number_match = re.search(r'\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}', text)
     email_match = re.search(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', text, re.IGNORECASE)
