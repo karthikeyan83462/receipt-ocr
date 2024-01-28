@@ -81,13 +81,11 @@ def main():
         for key, value in merchant_info_filtered.items():
             st.text(f"    {key}: {value}")
 
-        # Display items and costs
+        # Display items and costs in a table
         st.subheader("Items and Costs:")
-        if len(items) == len(item_cost):
-            for i in range(len(items)):
-                st.markdown(f"<p class='item'>{items[i]}</p>: <span class='cost'>{item_cost[i]}</span>", unsafe_allow_html=True)
-        else:
-            st.error("Error: Lengths of items and costs lists do not match.")
+        items_cost_data = {"Items": items, "Cost": item_cost}
+        items_cost_df = pd.DataFrame(items_cost_data)
+        st.table(items_cost_df)
 
         # Display additional values
         st.subheader("Additional Values:")
