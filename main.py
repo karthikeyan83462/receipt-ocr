@@ -46,10 +46,13 @@ def main():
 
         # Display items and costs in a table
         st.subheader("Items and Costs:")
-        items_cost_data = {"Items": items, "Cost": item_cost}
-        items_cost_df = pd.DataFrame(items_cost_data)
-        st.table(items_cost_df)
-
+        if len(items) == len(item_cost):
+            items_cost_data = {"Items": items, "Cost": item_cost}
+            items_cost_df = pd.DataFrame(items_cost_data)
+            st.table(items_cost_df)
+        else:
+            st.error("Error: Lengths of items and costs lists do not match.")
+        
         # Display additional values
         st.subheader("Additional Values:")
         for i in range(len(additional_val)):
