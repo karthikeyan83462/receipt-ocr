@@ -8,7 +8,7 @@ import numpy as np
 from pytesseract import Output
 
 # Import functions from utils.py
-from utils import *
+from utils import clean_special_characters, clean_n_s, extract_info, extract_merchant_info
 
 # Main function
 def main():
@@ -43,10 +43,11 @@ def main():
         for key, value in merchant_info_filtered.items():
             st.text(f"    {key}: {value}")
 
-        # Display extracted items and costs
+        # Display items and costs in a table
         st.subheader("Items and Costs:")
-        for i in range(len(items)):
-            st.write(f"    {items[i]}: {item_cost[i]}")
+        items_cost_data = {"Items": items, "Cost": item_cost}
+        items_cost_df = pd.DataFrame(items_cost_data)
+        st.table(items_cost_df)
 
         # Display additional values
         st.subheader("Additional Values:")
