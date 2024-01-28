@@ -81,11 +81,10 @@ def main():
         for key, value in merchant_info_filtered.items():
             st.text(f"    {key}: {value}")
 
-        # Display items and costs in a table
+        # Display extracted items and costs
         st.subheader("Items and Costs:")
-        items_cost_data = {"Items": items, "Cost": item_cost}
-        items_cost_df = pd.DataFrame(items_cost_data)
-        st.table(items_cost_df)
+        for i in range(len(items)):
+            st.write(f"    {items[i]}: {item_cost[i]}")
 
         # Display additional values
         st.subheader("Additional Values:")
