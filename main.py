@@ -3,6 +3,7 @@ import re
 import os
 import json
 import cv2
+import pandas as pd
 import pytesseract
 import numpy as np
 from pytesseract import Output
