@@ -1,4 +1,2 @@
-opencv-python
-numpy
-pytesseract
-streamlit
+tesseract-ocr
+libgtk2.0-dev
