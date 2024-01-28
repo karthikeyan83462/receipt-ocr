@@ -1,3 +1,4 @@
-tesseract-ocr
-freeglut3-dev
-libgtk2.0-dev
+opencv-python
+numpy
+pytesseract
+streamlit
